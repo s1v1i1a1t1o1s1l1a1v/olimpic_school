@@ -1,1 +1,2 @@
-Here is a specification for an Apple laptop 
+Here is a specification for an Apple laptop
+These changes are not part of 1st commit  
