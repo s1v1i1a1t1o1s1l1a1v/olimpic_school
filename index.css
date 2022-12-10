@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 p {
     font-weight: 700;
     font-size: 16px;
+=======
+body {
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 700;
+>>>>>>> 66bb5441d45c130257efd3c0ccc72f931575ecfc
 }
 
 img {
