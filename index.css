@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 p {
     font-size: 16px;
+=======
+body {
+    width: 100%;
+}
+
+p {
+    font-size: 18px;
+>>>>>>> fa18c7bd07612b5ae189f5fd6d1ce1c654cdf391
     font-weight: 700;
 }
 
