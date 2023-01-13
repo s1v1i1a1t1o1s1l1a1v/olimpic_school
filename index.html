@@ -6,8 +6,10 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
+
 <div>
     <h1>Automobile UA</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis dolorem officia ipsam asperiores
@@ -30,14 +32,26 @@
         <li><span>Audi</span>
         </li>
     </ul>
-
-    <img src="assets/koenigsegg.jpg" alt="konnenseg">
-    <img src="assets/opel_insignia.jpg" alt="">
-    <img src="assets/honda_cb_1000_r.jpg" alt="honda_cb_1000_r">
-    <img src="assets/bmw_z4.jpg" alt="bmw_z4">
-    <img src="assets/mercedes_c_220.jpg" alt="mercedes_c_220">
-    <img src="assets/audi_rs666.jpeg" alt="audi">
-
+    
+    <div class="summa">
+        <input value="0" id="x" type="number"></input>
+        <span>+</span>
+        <input value="0" id="y" type="number"></input>
+        <span>=</span>
+        <span class="result" id="result">?</span>
+        <br>
+        <button class="calculate" onclick="getParams()">Calculate sum only!</button>
+        <span id="error_message" style="color:red;"></span>
+    </div>
+    <div style="margin-top:23px">
+        <img src="assets/koenigsegg.jpg" alt="konnenseg">
+        <img src="assets/opel_insignia.jpg" alt="">
+        <img src="assets/honda_cb_1000_r.jpg" alt="honda_cb_1000_r">
+        <img src="assets/bmw_z4.jpg" alt="bmw_z4">
+        <img src="assets/mercedes_c_220.jpg" alt="mercedes_c_220">
+        <img src="assets/audi_rs666.jpeg" alt="audi">
+    </div>
+    
 </div>
 
 <footer>
