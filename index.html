@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <title>Слайдер</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+    <link rel="stylesheet" href="styles/index.css">
+    <script type="module" src="scripts/slides.js"></script>
 </head>
 <body>
 
@@ -33,16 +35,6 @@
         </li>
     </ul>
     
-    <div class="summa">
-        <input value="0" id="x" type="number"></input>
-        <span>+</span>
-        <input value="0" id="y" type="number"></input>
-        <span>=</span>
-        <span class="result" id="result">?</span>
-        <br>
-        <button class="calculate" onclick="getParams()">Calculate sum only!</button>
-        <span id="error_message" style="color:red;"></span>
-    </div>
     <div style="margin-top:23px">
         <img src="assets/koenigsegg.jpg" alt="konnenseg">
         <img src="assets/opel_insignia.jpg" alt="">
@@ -51,6 +43,71 @@
         <img src="assets/mercedes_c_220.jpg" alt="mercedes_c_220">
         <img src="assets/audi_rs666.jpeg" alt="audi">
     </div>
+    
+    <!--start-->
+    <div class="ui container">
+        <div class="ui basic segment">
+            <h1 class="ui header">Слайдер</h1>
+            <div class="ui segment">
+                <button
+                        class="ui labeled icon button"
+                        onclick="onPrevClick()"
+                >
+                    <i class="left arrow icon"></i>
+                    Попередній слайд
+                </button>
+                <div class="ui segment raised">
+                    <!-- тут будемо присвоювати дані слайду -->
+                    <i class="icon" id="slideIcon"></i>
+                    <div id="slideText"></div>
+                </div>
+                <button
+                        class="ui right labeled icon button"
+                        onclick="onNextClick()"
+                >
+                    <i class="right arrow icon"></i>
+                    Наступний слайд
+                </button>
+            </div>
+            <div>
+                <button class="ui right labeled icon button operational"
+                        id="invalidSlide"
+                >
+                    Обманути програму
+                </button>
+                <br>
+                <button class="ui right labeled icon button operational"
+                        id="realInvalidSlide"
+                >
+                    Збити програму
+                </button>
+                <br>
+                <button class="ui right labeled icon button operational"
+                        id="randomSlide"
+                >
+                    Додати слайд
+                </button>
+            </div>
+        </div>
+        <div class="ui basic segment">
+            <h1 class="ui header">Завдання</h1>
+            <div class="ui segment">
+                <div class="ui segment raised" id="todoSegment">
+                    <!-- тут будемо присвоювати дані слайду -->
+                    <i class="icon" id="slideIcon"></i>
+                    <div id="slideText"></div>
+                </div>
+                <div class="ui action input">
+                    <input type="text" placeholder="Search...">
+                    <button class="ui right labeled icon button">
+                        <i class="plus icon"></i>
+                        Додати
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end-->
     
 </div>
 

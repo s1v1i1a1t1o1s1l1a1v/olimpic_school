@@ -1,2 +1,0 @@
-Here is lg laptop specification
-This should not be staged for a commit  
