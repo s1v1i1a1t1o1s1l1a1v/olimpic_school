@@ -1,0 +1,49 @@
+<html lang="en"><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Слайдер</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <script type="module" src="./Slider.js"></script>
+    </head>
+    <body>
+<div class="ui container">
+            <div class="ui basic segment">
+                <h1 class="ui header">Слайдер</h1>
+                <div class="ui segment">
+                    <button class="ui labeled icon button" onclick="onPrevClick()">
+                                <i class="left arrow icon"></i>
+                        Попередній слайд
+                    </button>
+                    <div class="ui segment raised">
+                        <!-- тут будемо присвоювати дані слайду -->
+                        <i class="icon" id="slideIcon"></i>
+                        <div id="slideText"></div>
+                    </div>
+                    <button class="ui right labeled icon button" onclick="onNextClick()">
+                        <i class="right arrow icon"></i>
+                        Наступний слайд
+                    </button>
+                </div>
+            </div>
+            <div class="ui basic segment">
+                <h1 class="ui header">Завдання</h1>
+                <div class="ui segment">
+                    <div class="ui segment raised" id="todoSegment">
+                        <!-- тут будемо присвоювати дані слайду -->
+                        <i class="icon" id="slideIcon"></i>
+                        <div id="slideText"></div>
+                    </div>
+                    <div class="ui action input">
+                        <input type="text" placeholder="Search...">
+                        <button class="ui right labeled icon button">
+                            <i class="plus icon"></i>
+                            Додати
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    
+
+</body></html>

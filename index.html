@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
+<head>      
+
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script type="module" src="./Slider.js"></script>
     <title>Document</title>
 
 </head>
@@ -20,16 +23,56 @@
         consequatur numquam, iusto minima magnam cum praesentium recusandae quod perspiciatis qui vel dolore, ullam
         accusamus!</p>
     <h1>Honda Motor Bikes</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nam autem, reprehenderit provident commodi at quos optio expedita dolorem facilis, aspernatur esse eius asperiores possimus tempore molestiae animi itaque consequatur!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae animi doloremque ut a veritatis quidem, odio quae optio voluptate, aspernatur excepturi expedita perspiciatis et voluptatum nisi ex nemo. Suscipit, id!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nam autem, reprehenderit provident commodi
+         at quos optiexpedita dolorem facilis, aspernatur esse eius asperiores possimus tempore molestiae animi itaque 
+         consequatur!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae animi doloremque ut a veritatis quidem, odio 
+        quae optio voluptate, aspernatur excepturi expedita perspiciatis et voluptatum nisi ex nemo. Suscipit, id!</p>
 
-    <div class="main-image">
+    <d              iv class="main-image">
         <span>Honda CBR</span>
         <img src="assets/honda_cb_1000_r.jpg" alt="honda_cb_1000_r">
         <span>Tenerife</span>
         <img src="assets/los_gigantes.jpg" alt="los_gigantes">
-        <span>Koenigsegg AG</span>
+        <span>koenigsegg jesko</span>
         <img src="assets/koenigsegg.jpg" alt="konnenseg">
+    </div>
+    <div class="ui container">
+        <div class="ui basic segment">
+            <h1 class="ui header">Слайдер</h1>
+            <div class="ui segment">
+                <button class="ui labeled icon button" onclick="onPrevClick()">
+                            <i class="left arrow icon"></i>
+                    Попередній слайд
+                </button>
+                <div class="ui segment raised">
+                    <!-- тут будемо присвоювати дані слайду -->
+                    <i class="icon" id="slideIcon"></i>
+                    <div id="slideText"></div>
+                </div>
+                <button class="ui right labeled icon button" onclick="onNextClick()">
+                    <i class="right arrow icon"></i>
+                    Наступний слайд
+                </button>
+            </div>
+        </div>
+        <div class="ui basic segment">
+            <h1 class="ui header">Завдання</h1>
+            <div class="ui segment">
+                <div class="ui segment raised" id="todoSegment">
+                    <!-- тут будемо присвоювати дані слайду -->
+                    <i class="icon" id="slideIcon"></i>
+                    <div id="slideText"></div>
+                </div>
+                <div class="ui action input">
+                    <input type="text" placeholder="Search...">
+                    <button class="ui right labeled icon button">
+                        <i class="plus icon"></i>
+                        Додати
+                    </button>
+                  </div>
+            </div>
+        </div>
     </div>
 
 </body>
