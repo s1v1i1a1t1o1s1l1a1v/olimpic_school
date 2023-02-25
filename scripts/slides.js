@@ -1,6 +1,5 @@
 // обʼєкт з даними про слайди
-
-let randomIcon = [
+const randomIcon = [
     "share",
     "retweet",
     "upload",
@@ -9,7 +8,8 @@ let randomIcon = [
     "sort"
 ];
 
-let data = [
+// тип даних - масив
+const data = [
     {
         text: "Перший слайд",
         icon: "cloud",
@@ -30,7 +30,7 @@ let data = [
         text: "Пʼятий слайд",
         icon: "compass",
     }
-];// тип даних - масив
+];
 
 // визначаємо основні змінні
 // let - може змінюватись далі
@@ -53,7 +53,6 @@ invalidSlide.addEventListener('click', function () {
 })
 
 realInvalidSlider.addEventListener('click', function () {
-    
     data[activeSlide + 1] = "";
     setSlide();
 })
@@ -63,7 +62,7 @@ randomSlider.addEventListener('click', function () {
         text: "Доданий слайд",
         icon: randomIcon[getRandomInt(randomIcon.length)]
     });
-    maxSlides = data.length-1;
+    maxSlides = data.length - 1;
     setSlide();
 })
 
@@ -74,22 +73,26 @@ function getRandomInt(max) {
 
 // функція присвоєння слайду, задати дані в HTML
 function setSlide() {
-    const isValidSlideData = isSlideValid(data[activeSlide]);
-    if (isValidSlideData) {
-        console.log('поточний слайд', data[activeSlide]);
-        console.log('поточний номер слайду', activeSlide);
-        slideText.innerHTML = data[activeSlide].text;
-        slideIcon.classList = [];
-        slideIcon.classList.add(data[activeSlide].icon, "icon");
-    } else {
-        throw new Error("Дані передані у функцію слайдера недійсні")
+    try {
+        const isValidSlideData = isSlideValid(data[activeSlide]);
+
+        if (isValidSlideData) {
+            console.log('поточний слайд', data[activeSlide]);
+            console.log('поточний номер слайду', activeSlide);
+            slideText.innerHTML = data[activeSlide].text;
+            slideIcon.classList = [];
+            slideIcon.classList.add(data[activeSlide].icon, "icon");
+        } else {
+            throw new Error("Дані передані у функцію слайдера недійсні")
+        }
+    } catch(err) {
+        console.error("setSlide function error: ", err);
     }
 }
 
 // функція перевірки чи є дані слайду, має вхідний параметр і повертає результат
 function isSlideValid(payload) {
-    const isValid = !!payload;
-    return isValid;
+    return Boolean(payload && payload.text);
 }
 
 // функція коли нажимаємо на попередній слайд
