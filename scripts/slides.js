@@ -7,7 +7,6 @@ const randomIcon = [
     "play",
     "sort"
 ];
-
 // тип даних - масив
 const data = [
     {
@@ -29,34 +28,28 @@ const data = [
     {
         text: "Пʼятий слайд",
         icon: "compass",
-    }
+    },
 ];
-
 // визначаємо основні змінні
 // let - може змінюватись далі
 // const - не може змінюватись
 let activeSlide = 0; // тип даних - число
 const minSlides = 0;
 let maxSlides = data.length - 1;
-
 // зчитуємо дані про елементи по їхніх айді
 const slideText = document.getElementById("slideText");
 const slideIcon = document.getElementById("slideIcon");
-
 const invalidSlide = document.getElementById('invalidSlide');
 const realInvalidSlider = document.getElementById('realInvalidSlide');
 const randomSlider = document.getElementById('randomSlide');
-
 invalidSlide.addEventListener('click', function () {
     data[activeSlide - 1] = "I am not a valide slide but I will pass";
     setSlide();
 })
-
 realInvalidSlider.addEventListener('click', function () {
     data[activeSlide + 1] = "";
     setSlide();
 })
-
 randomSlider.addEventListener('click', function () {
     data.push({
         text: "Доданий слайд",
@@ -65,17 +58,14 @@ randomSlider.addEventListener('click', function () {
     maxSlides = data.length - 1;
     setSlide();
 })
-
 function getRandomInt(max) {
     let randomIndex = Math.floor(Math.random() * max);
     return randomIndex;
 }
-
 // функція присвоєння слайду, задати дані в HTML
-function setSlide() {
+function setSlide(kurva) {
     try {
         const isValidSlideData = isSlideValid(data[activeSlide]);
-
         if (isValidSlideData) {
             console.log('поточний слайд', data[activeSlide]);
             console.log('поточний номер слайду', activeSlide);
@@ -83,18 +73,19 @@ function setSlide() {
             slideIcon.classList = [];
             slideIcon.classList.add(data[activeSlide].icon, "icon");
         } else {
-            throw new Error("Дані передані у функцію слайдера недійсні")
+            throw new Error("Дані передані  функцію слайдера недійсні")
         }
     } catch(err) {
         console.error("setSlide function error: ", err);
+
+        slideText.innerHTML = "text";
+        slideIcon.classList.add(randomIcon[0]); 
     }
 }
-
 // функція перевірки чи є дані слайду, має вхідний параметр і повертає результат
 function isSlideValid(payload) {
     return Boolean(payload && payload.text);
 }
-
 // функція коли нажимаємо на попередній слайд
 // в HTML визначено як onclick="onPrevClick()"
 const onPrevClick = () => {
@@ -104,7 +95,6 @@ const onPrevClick = () => {
     }
     setSlide();
 };
-
 // функція коли нажимаємо на наступний слайд
 // в HTML визначено як onclick="onNextClick()"
 const onNextClick = () => {
@@ -114,9 +104,7 @@ const onNextClick = () => {
     }
     setSlide();
 };
-
 // виконується ця функція коли оновлюємо сторінку, вона нам присвоює перший слайд
 setSlide();
-
 window.onNextClick = onNextClick;
 window.onPrevClick = onPrevClick;
