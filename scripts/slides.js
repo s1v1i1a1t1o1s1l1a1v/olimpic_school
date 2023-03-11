@@ -19,24 +19,32 @@ const data = [
         src: "assets/koenigsegg.jpg",
         text: "Перший слайд",
         icon: "cloud",
-    },
+        src: "assets/honda_cb_1000_r.jpg",
+        name: "honda",
+    },    
     {
         nmae: "bmw",
         src: "assets/bmw_z4.jpg",  
         text: "Другий слайд",
         icon: "book",
+        src: "assets/bmw_z4.jpg",
+        name: "bmw_z4",
     },
     {
         name: "honda", 
         src: "assets/audi_rs666.jpeg", 
         text: "Третій слайд",
         icon: "calculator",
+        src: "assets/koenigsegg.jpg",
+        name: "koenigsegg",
     },
     {
         name: "mercedes", 
         src:"assets/mercedes_c_220.jpg",
         text: "Четвертий слайд",
         icon: "building",
+        src: "assets/mercedes_c_220.jpg",
+        name: "mercedec_c_220",
     },
     {
         name: "opel", 
@@ -92,6 +100,9 @@ function setSlide(kurva) {
             slideImage.src = mercedes[0].src; 
         }
     } catch(err) {
+        slideText.innerText =  "stalas pomulka";
+        slideIcon.classList = [];
+        slideIcon.classList.add("cut", "icon");
         console.error("setSlide function error: ", err);
 
         slideText.innerHTML = "збита програма!";
