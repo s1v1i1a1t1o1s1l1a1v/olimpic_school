@@ -13,22 +13,32 @@ const data = [
     {
         text: "Перший слайд",
         icon: "cloud",
-    },
+        src: "assets/honda_cb_1000_r.jpg",
+        name: "honda",
+    },    
     {
         text: "Другий слайд",
         icon: "book",
+        src: "assets/bmw_z4.jpg",
+        name: "bmw_z4",
     },
     {
         text: "Третій слайд",
         icon: "calculator",
+        src: "assets/koenigsegg.jpg",
+        name: "koenigsegg",
     },
     {
         text: "Четвертий слайд",
         icon: "building",
+        src: "assets/mercedes_c_220.jpg",
+        name: "mercedec_c_220",
     },
     {
         text: "Пʼятий слайд",
         icon: "compass",
+        src: "assets/opel_insignia.jpg",
+        name: "opel_insignia",
     }
 ];
 
@@ -80,12 +90,16 @@ function setSlide() {
             console.log('поточний слайд', data[activeSlide]);
             console.log('поточний номер слайду', activeSlide);
             slideText.innerHTML = data[activeSlide].text;
+            slideIcon.src = data[activeSlide].src;
             slideIcon.classList = [];
             slideIcon.classList.add(data[activeSlide].icon, "icon");
         } else {
-            throw new Error("Дані передані у функцію слайдера недійсні")
+           throw new Error("Дані передані у функцію слайдера недійсні")
         }
     } catch(err) {
+        slideText.innerText =  "stalas pomulka";
+        slideIcon.classList = [];
+        slideIcon.classList.add("cut", "icon");
         console.error("setSlide function error: ", err);
     }
 }
