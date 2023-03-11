@@ -1,31 +1,46 @@
 // обʼєкт з даними про слайди
+const mercedes = [
+    {
+        src:"assets/w140.jpg", 
+    }, 
+]
 const randomIcon = [
     "share",
     "retweet",
     "upload",
     "reply",
     "play",
-    "sort"
+    "sort",
 ];
 // тип даних - масив
 const data = [
     {
+        name: "konigsegg",
+        src: "assets/koenigsegg.jpg",
         text: "Перший слайд",
         icon: "cloud",
     },
     {
+        nmae: "bmw",
+        src: "assets/bmw_z4.jpg",  
         text: "Другий слайд",
         icon: "book",
     },
     {
+        name: "honda", 
+        src: "assets/audi_rs666.jpeg", 
         text: "Третій слайд",
         icon: "calculator",
     },
     {
+        name: "mercedes", 
+        src:"assets/mercedes_c_220.jpg",
         text: "Четвертий слайд",
         icon: "building",
     },
     {
+        name: "opel", 
+        src: "assets/opel_insignia.jpg", 
         text: "Пʼятий слайд",
         icon: "compass",
     },
@@ -38,7 +53,7 @@ const minSlides = 0;
 let maxSlides = data.length - 1;
 // зчитуємо дані про елементи по їхніх айді
 const slideText = document.getElementById("slideText");
-const slideIcon = document.getElementById("slideIcon");
+const slideImage = document.getElementById("slideImage");
 const invalidSlide = document.getElementById('invalidSlide');
 const realInvalidSlider = document.getElementById('realInvalidSlide');
 const randomSlider = document.getElementById('randomSlide');
@@ -65,21 +80,22 @@ function getRandomInt(max) {
 // функція присвоєння слайду, задати дані в HTML
 function setSlide(kurva) {
     try {
-        const isValidSlideData = isSlideValid(data[activeSlide]);
+        const activeSlideData = data[activeSlide]; 
+        const isValidSlideData = isSlideValid(activeSlideData)
         if (isValidSlideData) {
-            console.log('поточний слайд', data[activeSlide]);
+            console.log('поточний слайд', activeSlideData);
             console.log('поточний номер слайду', activeSlide);
-            slideText.innerHTML = data[activeSlide].text;
-            slideIcon.classList = [];
-            slideIcon.classList.add(data[activeSlide].icon, "icon");
+            slideText.innerHTML = activeSlideData.text;
+            slideImage.src = activeSlideData.src; 
         } else {
             throw new Error("Дані передані  функцію слайдера недійсні")
+            slideImage.src = mercedes[0].src; 
         }
     } catch(err) {
         console.error("setSlide function error: ", err);
 
-        slideText.innerHTML = "text";
-        slideIcon.classList.add(randomIcon[0]); 
+        slideText.innerHTML = "збита програма!";
+        slideImage.src = mercedes[0].src; 
     }
 }
 // функція перевірки чи є дані слайду, має вхідний параметр і повертає результат
