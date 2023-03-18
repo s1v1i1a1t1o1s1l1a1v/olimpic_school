@@ -8,7 +8,7 @@
     <title>Слайдер</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <link rel="stylesheet" href="styles/index.css">
-    
+    <link rel="stylesheet" href="styles/slider.css">
 </head>
 <body>
     <div class="ui container">
@@ -32,18 +32,9 @@
             <li><span>Mercedes Benz Sprinter 316 CDI 2018</span></li>
             <li><span>Audi</span></li>
         </ul>
-        <div style="margin-top:23px">
-            <img src="assets/koenigsegg.jpg" alt="konnenseg">
-            <img src="assets/opel_insignia.jpg" alt="">
-            <img src="assets/honda_cb_1000_r.jpg" alt="honda_cb_1000_r">
-            <img src="assets/bmw_z4.jpg" alt="bmw_z4">
-            <img src="assets/mercedes_c_220.jpg" alt="mercedes_c_220">
-            <img src="assets/audi_rs666.jpeg" alt="audi">
-            <img src="assets/w140.jpg" alt="w140"> 
-        </div>
     </div>
     <!--start slider-->
-    <div class="ui container">
+    <div class="slider ui container">
         <div class="ui basic segment">
             <h1 class="ui header">Слайдер</h1>
             <div class="ui segment">
@@ -56,7 +47,9 @@
                 </button>
                 <div class="ui segment raised">
                     <!-- тут будемо присвоювати дані слайду -->
-                    <img src="assets/honda_cb_1000_r.jpg" alt="Honda" class="icon" id="slideImage">
+                    <div class="slider-image">
+                        <img src="assets/honda_cb_1000_r.jpg" alt="Honda" class="icon" id="slideImage">
+                    </div>
                     <div id="slideText"></div>
                 </div>
                 <button
@@ -88,23 +81,6 @@
                 >
                     Додати слайд
                 </button>
-            </div>
-        </div>
-        <div class="ui basic segment">
-            <h1 class="ui header">Завдання</h1>
-            <div class="ui segment">
-                <div class="ui segment raised" id="todoSegment">
-                    <!-- тут будемо присвоювати дані слайду -->
-                    <i class="icon" id="slideIcon"></i>
-                    <div id="slideText"></div>
-                </div>
-                <div class="ui action input">
-                    <input type="text" placeholder="Search...">
-                    <button class="ui right labeled icon button">
-                        <i class="plus icon"></i>
-                        Додати
-                    </button>
-                </div>
             </div>
         </div>
     </div>
