@@ -5,6 +5,7 @@ build/
 dist/
 tmp/
 out-tsc/
+localhost/
 
 # dependencies
 node_modules/
