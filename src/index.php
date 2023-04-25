@@ -33,6 +33,7 @@
             <li><span>Audi</span></li>
         </ul>
     </div>
+    <?php echo phpinfo()?>
     <!--start slider-->
     <div class="slider ui container">
         <div class="ui basic segment">
@@ -85,8 +86,8 @@
         </div>
     </div>
     <!--end-->
-    <footer>
-        some footer
+    <footer class="footer">
+        Copyright 2023
     </footer>
     <script type="module" src="scripts/slides.js"></script>
 </body>
