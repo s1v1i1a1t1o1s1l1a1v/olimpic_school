@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/slider.css">
 </head>
 <body>
+    <?php phpinfo()?>
     <div class="ui container">
         <div class="center aligned content">test</div>
         <h1>Automobile UA</h1>
