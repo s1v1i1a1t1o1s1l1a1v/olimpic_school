@@ -6,6 +6,7 @@ dist/
 tmp/
 out-tsc/
 localhost/
+database/
 
 # dependencies
 node_modules/
