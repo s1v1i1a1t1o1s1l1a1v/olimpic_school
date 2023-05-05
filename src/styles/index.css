@@ -53,3 +53,11 @@ footer {
 button.operational {
     margin: 10px !important;
 }
+.main-header {
+    height: 60px;
+    background: #24292f;
+}
+.main-footer {
+    height: 75px;
+    background-color: #24292f;
+}

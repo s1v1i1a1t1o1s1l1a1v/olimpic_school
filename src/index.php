@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="styles/slider.css">
 </head>
 <body>
-    <?php phpinfo()?>
+    <header class="main-header"></header>
     <div class="ui container">
-        <div class="center aligned content">test</div>
         <h1>Automobile UA</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis dolorem officia ipsam asperiores
@@ -34,7 +33,7 @@
             <li><span>Audi</span></li>
         </ul>
     </div>
-    <?php echo phpinfo()?>
+    <!-- <?php echo phpinfo()?> -->
     <!--start slider-->
     <div class="slider ui container">
         <div class="ui basic segment">
@@ -87,7 +86,7 @@
         </div>
     </div>
     <!--end-->
-    <footer class="footer">
+    <footer class="footer main-footer">
         Copyright 2023
     </footer>
     <script type="module" src="scripts/slides.js"></script>
