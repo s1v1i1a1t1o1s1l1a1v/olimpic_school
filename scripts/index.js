@@ -1,6 +1,6 @@
 function greeting(){
     if(true){
-        alert('Вітаю на нашому сайті'); 
+        alert('Вітаю на нашому сайті!'); 
     }
     else{
         alert('...'); 
