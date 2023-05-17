@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+section{
+    background: linear-gradient(to bottom, #000, #222, #000);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section ul{
+    display: flex;
+}
+section ul li{
+    padding: 0 3px;
+    height: 500px;
+    animation: anime 3s ease-in-out infinite alternate;
+}
+
+section ul li:nth-child( 1 ){ animation-delay: -0.1s; }
+section ul li:nth-child( 2 ){ animation-delay: -0.2s; }
+section ul li:nth-child( 3 ){ animation-delay: -0.3s; }
+section ul li:nth-child( 4 ){ animation-delay: -0.4s; }
+section ul li:nth-child( 5 ){ animation-delay: -0.5s; }
+section ul li:nth-child( 6 ){ animation-delay: -0.6s; }
+section ul li:nth-child( 7 ){ animation-delay: -0.7s; }
+section ul li:nth-child( 8 ){ animation-delay: -0.8s; }
+section ul li:nth-child( 9 ){ animation-delay: -0.9s; }
+section ul li:nth-child( 10 ){ animation-delay: -1s; }
+section ul li:nth-child( 11 ){ animation-delay: -1.1s; }
+section ul li:nth-child( 12 ){ animation-delay: -1.2s; }
+section ul li:nth-child( 13 ){ animation-delay: -1.3s; }
+section ul li:nth-child( 14 ){ animation-delay: -1.4s; }
+section ul li:nth-child( 15 ){ animation-delay: -1.5s; }
+section ul li:nth-child( 16 ){ animation-delay: -1.6s; }
+section ul li:nth-child( 17 ){ animation-delay: -1.7s; }
+section ul li:nth-child( 18 ){ animation-delay: -1.8s; }
+section ul li:nth-child( 19 ){ animation-delay: -1.9s; }
+section ul li:nth-child( 20 ){ animation-delay: -2s; }
+section ul li:nth-child( 21 ){ animation-delay: -2.1s; }
+section ul li:nth-child( 22 ){ animation-delay: -2.2s; }
+section ul li:nth-child( 23 ){ animation-delay: -2.3s; }
+section ul li:nth-child( 24 ){ animation-delay: -2.4s; }
+section ul li:nth-child( 25 ){ animation-delay: -2.5s; }
+section ul li:nth-child( 26 ){ animation-delay: -2.6s; }
+section ul li:nth-child( 27 ){ animation-delay: -2.7s; }
+section ul li:nth-child( 28 ){ animation-delay: -2.8s; }
+section ul li:nth-child( 29 ){ animation-delay: -2.9s; }
+section ul li:nth-child( 30 ){ animation-delay: -3s; }
+section ul li:nth-child( 31 ){ animation-delay: -3.1s; }
+section ul li:nth-child( 32 ){ animation-delay: -3.2s; }
+section ul li:nth-child( 33 ){ animation-delay: -3.3s; }
+section ul li:nth-child( 34 ){ animation-delay: -3.4s; }
+section ul li:nth-child( 35 ){ animation-delay: -3.5s; }
+section ul li:nth-child( 36 ){ animation-delay: -3.6s; }
+section ul li:nth-child( 37 ){ animation-delay: -3.7s; }
+section ul li:nth-child( 38 ){ animation-delay: -3.8s; }
+section ul li:nth-child( 39 ){ animation-delay: -3.9s; }
+section ul li:nth-child( 40 ){ animation-delay: -4s; }
+section ul li:nth-child( 41 ){ animation-delay: -4.1s; }
+section ul li:nth-child( 42 ){ animation-delay: -4.2s; }
+section ul li:nth-child( 43 ){ animation-delay: -4.3s; }
+section ul li:nth-child( 44 ){ animation-delay: -4.4s; }
+section ul li:nth-child( 45 ){ animation-delay: -4.5s; }
+section ul li:nth-child( 46 ){ animation-delay: -4.6s; }
+section ul li:nth-child( 47 ){ animation-delay: -4.7s; }
+section ul li:nth-child( 48 ){ animation-delay: -4.8s; }
+section ul li:nth-child( 49 ){ animation-delay: -4.9s; }
+section ul li:nth-child( 50 ){ animation-delay: -5s; }
+
+
+section ul li::before,
+section ul li::after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 50%;
+}
+
+section ul li::before{
+    background: #0059a9;
+    border-radius: 3px 3px 0 0;
+}
+section ul li::after{
+    background: #fcd800;
+    border-radius: 0 0 3px 3px;
+}
+@keyframes anime{
+    0%{
+        transform: translateY( -60px );
+    }
+    100%{
+        transform: translateY( 60px );
+    }
+}
+
+.jump-button3{
+    text-align: center;
+    margin-top: 30px;
+}
+.span3{
+    font-size: 12px;
+    background: #2b2b2b;
+    color: rgb(107, 107, 107);
+    border: 1px solid #3d3d3d;
+    padding: 3px 6px;
+    margin-left: 15px;
+}
+.number1{
+    font-size: 12px;
+    background: #b9b9b9;
+    color: rgb(255, 255, 255);
+    border: 1px solid #afafaf;
+    padding: 3px 6px;
+    margin-right: 15px;
+}
+.number1:hover{
+    background-color: #6e6e6e;
+    color: rgb(255, 255, 255);
+}
