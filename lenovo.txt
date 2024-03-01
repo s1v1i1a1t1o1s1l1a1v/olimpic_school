@@ -1,3 +1,0 @@
-Lenovo laptop specification 
-A text to check if a reviewer really reviewed this PR. 
-PR has to be declide. 
