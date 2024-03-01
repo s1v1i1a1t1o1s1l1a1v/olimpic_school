@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Слайдер</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
@@ -47,15 +46,13 @@
                 </button>
                 <div class="ui segment raised">
                     <!-- тут будемо присвоювати дані слайду -->
-                    <div class="slider-image">
-                        <img src="assets/honda_cb_1000_r.jpg" alt="Honda" class="icon" id="slideImage">
-                    </div>
+                    <i class="icon" id="slideIcon"></i>
                     <div id="slideText"></div>
+                    <p id="slideProperty"></p>
                 </div>
                 <button
                     class="ui right labeled icon button"
-                    onclick="onNextClick()"
-                >
+                    onclick="onNextClick()">
                     <i class="right arrow icon"></i>
                     Наступний слайд
                 </button>
